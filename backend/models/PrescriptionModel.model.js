@@ -27,7 +27,7 @@ const PrescriptionSchema=mongoose.Schema({
         type:String,
         required:true
     },
-    date:{
+    issuedOn:{
         type:Date,
     }
     

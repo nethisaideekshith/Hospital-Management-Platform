@@ -9,6 +9,9 @@ DBconnection();
 // Import route files
 const loginRoute = require('./routes/LoginRoute.route');
 const signupRoute = require('./routes/SignupRoute.route');
+const bookingRoute=require('./routes/BookingRoute.route');
+const doctorRoute=require('./routes/DoctorRoute.route');
+const prescriptionRoute=require('./routes/PrescriptionRoute.route');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -17,7 +20,10 @@ app.get('/', (req, res) => {
 });
 
 app.use('/login',loginRoute);
-app.use("/signup",signupRoute);
+app.use('/signup',signupRoute);
+app.use('/booking',bookingRoute);
+app.use('/doctor',doctorRoute);
+app.use('/prescription',prescriptionRoute);
 
 const PORT = process.env.PORT || 3000;
 
